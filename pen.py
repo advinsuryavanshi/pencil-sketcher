@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 import cv2 
 
+st.set_page_config(page_title = "Pencil Sketcher ", page_icon = ":wink:", layout = "wide")
 
 def penSk(inp_img):
     img_gray = cv2.cvtColor(inp_img, cv2.COLOR_BGR2GRAY)
@@ -15,8 +16,8 @@ def dodgeV2(x, y):
     return cv2.divide(x, 255 - y, scale=256)
 
 
-st.title("PencilSketcher App")
-st.write("This app can make a pencile sketch of your photo")
+st.title("Pencil Sketcher App")
+st.write("This app can make a pencil sketch of your photo")
 
 file_image = st.sidebar.file_uploader("Upload your photo", type=['jpeg',"png","jpg"])
 
